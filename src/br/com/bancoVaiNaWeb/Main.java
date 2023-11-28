@@ -1,6 +1,7 @@
 package br.com.bancoVaiNaWeb;
 
 import java.util.Scanner;
+
 import static br.com.calculadora.Calculadora.calcularGastos;
 
 
@@ -40,5 +41,4 @@ public class Main {
         }
         scanner.close();
     }
-
 }

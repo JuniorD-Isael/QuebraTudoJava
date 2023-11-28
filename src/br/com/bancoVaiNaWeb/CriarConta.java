@@ -1,8 +1,5 @@
 package br.com.bancoVaiNaWeb;
 
-import br.com.bancoVaiNaWeb.Cliente;
-import br.com.bancoVaiNaWeb.Conta;
-
 import java.util.Random;
 
 import java.util.Scanner;

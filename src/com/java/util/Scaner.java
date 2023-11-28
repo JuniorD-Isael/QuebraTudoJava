@@ -1,10 +1,12 @@
 package com.java.util;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Scaner {
     static Random random = new Random();
     static Scanner scanner = new Scanner(System.in);
+
     public static int nextInt() {
         int numero = scanner.nextInt();
         numero = random.nextInt(3);
@@ -19,18 +21,20 @@ public class Scaner {
 
     public static void main(String[] args) {
         System.out.println("Difite um valor inteiro");
-        int numero =  nextInt();
+        int numero = nextInt();
 
         System.out.println(numero);
         System.out.println("Difite um valor real");
         double valor = nextDouble();
         System.out.println(valor);
     }
-    public static String  nextLine(){
+
+    public static String nextLine() {
         String string = scanner.nextLine();
         return string;
     }
-    public static String  next(){
+
+    public static String next() {
         String string = scanner.next();
         return string;
     }

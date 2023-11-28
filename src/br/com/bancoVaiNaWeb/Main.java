@@ -1,5 +1,4 @@
 package br.com.bancoVaiNaWeb;
-
 import br.com.bancoVaiNaWeb.conta.Conta;
 import br.com.bancoVaiNaWeb.operacoes.CriarConta;
 
@@ -11,6 +10,10 @@ import static br.com.bancoVaiNaWeb.operacoes.Calculadora.calcularGastos;
 
 public class Main {
     public static void main(String[] args) {
+        menu();
+    }
+
+    private static void menu() {
         Conta conta = null;
         int opcao = -1;
         Scanner scanner = new Scanner(System.in);

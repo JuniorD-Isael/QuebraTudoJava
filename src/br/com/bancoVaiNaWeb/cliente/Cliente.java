@@ -1,9 +1,9 @@
-package br.com.bancoVaiNaWeb;
+package br.com.bancoVaiNaWeb.cliente;
 
 public class Cliente {
 
-    String nome;
-    String cpf;
+    public String nome;
+    public String cpf;
 
     public Cliente(String nome, String cpf){
         this.nome = nome;

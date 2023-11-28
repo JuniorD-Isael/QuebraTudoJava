@@ -1,4 +1,4 @@
-package Java.util;
+package com.java.util;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -25,6 +25,14 @@ public class Scaner {
         System.out.println("Difite um valor real");
         double valor = nextDouble();
         System.out.println(valor);
+    }
+    public static String  nextLine(){
+        String string = scanner.nextLine();
+        return string;
+    }
+    public static String  next(){
+        String string = scanner.next();
+        return string;
     }
 
     public void close() {

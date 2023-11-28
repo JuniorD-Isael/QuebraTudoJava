@@ -1,4 +1,4 @@
-package br.com.calculadora;
+package br.com.bancoVaiNaWeb.operacoes;
 
 import java.util.Scanner;
 

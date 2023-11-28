@@ -1,4 +1,6 @@
-package br.com.bancoVaiNaWeb;
+package br.com.bancoVaiNaWeb.conta;
+
+import br.com.bancoVaiNaWeb.cliente.Cliente;
 
 public class Conta {
 
@@ -13,7 +15,11 @@ public class Conta {
         this.cliente = cliente;
     }
 
-        public void visualizarDadosConta() {
+    public Conta() {
+
+    }
+
+    public void visualizarDadosConta() {
         if (cliente != null) {
             System.out.println("Nome: " + cliente.nome);
             System.out.println("CPF: " + cliente.cpf);

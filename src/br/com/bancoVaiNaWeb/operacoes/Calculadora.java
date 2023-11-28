@@ -1,11 +1,13 @@
 package br.com.bancoVaiNaWeb.operacoes;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
 
 
     public static void calcularGastos() {
+        double num1 = 0, num2 = 0;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Calculadora Simples");
@@ -14,17 +16,19 @@ public class Calculadora {
         System.out.println("2. Subtração");
         System.out.println("3. Multiplicação");
         System.out.println("4. Divisão");
+        System.out.println("0. Para sair");
 
-        int escolha = scanner.nextInt();
+        int escolhaDaOperacao = lerEscolhaDaOperacao(scanner);
 
-        System.out.println("Digite o primeiro número: ");
-        double num1 = scanner.nextDouble();
-        System.out.println("Digite o segundo número: ");
-        double num2 = scanner.nextDouble();
-
+        if (escolhaDaOperacao != 0) {
+            System.out.println("Digite o primeiro número: ");
+            num1 = lerNumero(scanner);
+            System.out.println("Digite o segundo número: ");
+            num2 = lerNumero(scanner);
+        }
         double resultado = 0;
 
-        switch (escolha) {
+        switch (escolhaDaOperacao) {
             case 1:
                 resultado = soma(num1, num2);
                 break;
@@ -36,6 +40,10 @@ public class Calculadora {
                 break;
             case 4:
                 resultado = divisao(num1, num2);
+                break;
+            case 0:
+                System.out.println("Fim");
+                break;
         }
         System.out.println(resultado);
     }
@@ -63,5 +71,39 @@ public class Calculadora {
             System.out.println("Erro: Divisão por zero!");
             return 0;
         }
+    }
+
+    // Método para ler a escolha da operação
+    private static int lerEscolhaDaOperacao(Scanner scanner) {
+        int escolha;
+        while (true) {
+            try {
+                escolha = scanner.nextInt();
+                if (escolha >= 0 && escolha <= 4) {
+                    break;
+                } else {
+                    System.out.println("Opção inválida! Tente novamente.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Opção inválida! Tente novamente.");
+                scanner.next(); // Limpar o buffer do scanner
+            }
+        }
+        return escolha;
+    }
+
+    // Método para ler os números digitados
+    private static double lerNumero(Scanner scanner) {
+        double numero;
+        while (true) {
+            try {
+                numero = scanner.nextDouble();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida! Digite um número.");
+                scanner.next();
+            }
+        }
+        return numero;
     }
 }

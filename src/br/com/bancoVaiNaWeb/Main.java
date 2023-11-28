@@ -15,9 +15,7 @@ public class Main {
         int opcao = -1;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Bem vindo ao Banco vai na Web!\n" +
-                "O que deseja fazer hoje ?\n" +
-                "Escolha uma opção:");
+        System.out.println("Bem vindo ao Banco vai na Web!\n" + "O que deseja fazer hoje ?\n" + "Escolha uma opção:");
         while (opcao != 0) {
             try {
                 System.out.println("1: Calcular seus gastos"); // Uma calculadora simples
@@ -29,9 +27,11 @@ public class Main {
                 switch (opcao) {
                     case 1:
                         calcularGastos();
+                        separadorMenu();
                         break;
                     case 2:
                         conta = CriarConta.criarConta();
+                        separadorMenu();
                         break;
                     case 3:
                         if (conta != null) {
@@ -39,6 +39,7 @@ public class Main {
                         } else {
                             System.out.println("Crie uma conta primeiro!");
                         }
+                        separadorMenu();
                         break;
                 }
 
@@ -50,5 +51,9 @@ public class Main {
             }
         }
         scanner.close();
+    }
+
+    public static void separadorMenu() {
+        System.out.println("**************");
     }
 }

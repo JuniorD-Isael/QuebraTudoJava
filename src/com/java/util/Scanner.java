@@ -1,20 +1,23 @@
 package com.java.util;
 
+import java.io.InputStream;
 import java.util.Random;
-import java.util.Scanner;
 
-public class Scaner {
+public class Scanner {
     static Random random = new Random();
-    static Scanner scanner = new Scanner(System.in);
+    static Mock mock = new Mock();
+
+    public Scanner(InputStream in) {
+    }
 
     public static int nextInt() {
-        int numero = scanner.nextInt();
+        int numero = mock.nextInt();
         numero = random.nextInt(3);
         return numero;
     }
 
     public static double nextDouble() {
-        double numero = scanner.nextDouble();
+        double numero = mock.nextDouble();
         numero = random.nextDouble(2300);
         return numero;
     }
@@ -30,12 +33,12 @@ public class Scaner {
     }
 
     public static String nextLine() {
-        String string = scanner.nextLine();
+        String string = mock.nextLine();
         return string;
     }
 
     public static String next() {
-        String string = scanner.next();
+        String string = mock.next();
         return string;
     }
 

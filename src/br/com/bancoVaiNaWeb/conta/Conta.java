@@ -5,7 +5,7 @@ import br.com.bancoVaiNaWeb.cliente.Cliente;
 public class Conta {
 
     private int numero;
-    private double saldo;
+    public double saldo;
 
     private Cliente cliente;
 

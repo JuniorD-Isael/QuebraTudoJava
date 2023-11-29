@@ -26,9 +26,9 @@ public class Main {
             try {
                 System.out.println("1: Calcular seus gastos;");
                 System.out.println("2: Criar uma conta;"); // Crie uma conta
-                System.out.println("3: Verificar dados da sua conta; ");
-                System.out.println("4: Realizar um deposito; ");
-                System.out.println("5: Realizar um saque; ");
+                System.out.println("3: Realizar um deposito; ");
+                System.out.println("4: Realizar um saque; ");
+                System.out.println("5: Verificar dados da sua conta; ");
                 System.out.println("0: Sair.");
 
                 opcao = scanner.nextInt();
@@ -41,15 +41,8 @@ public class Main {
                         conta = CriarConta.criarConta();
                         separadorMenu();
                         break;
+
                     case 3:
-                        if (conta != null) {
-                            conta.visualizarDadosConta();
-                        } else {
-                            System.out.println("Crie uma conta primeiro!");
-                        }
-                        separadorMenu();
-                        break;
-                    case 4:
                         if (conta != null) {
                             System.out.println("Digite o valor que deseja depositar: ");
                             double valor = scanner.nextDouble();
@@ -58,7 +51,7 @@ public class Main {
                             System.out.println("Crie uma conta primeiro!");
                         }
                         break;
-                    case 5:
+                    case 4:
                         if (conta != null) {
                             System.out.println("Digite o valor que deseja sacar: ");
                             double valor = scanner.nextDouble();
@@ -67,6 +60,14 @@ public class Main {
                         } else {
                             System.out.println("Crie uma conta primeiro!");
                         }
+                        break;
+                    case 5:
+                        if (conta != null) {
+                            conta.visualizarDadosConta();
+                        } else {
+                            System.out.println("Crie uma conta primeiro!");
+                        }
+                        separadorMenu();
                         break;
                 }
 

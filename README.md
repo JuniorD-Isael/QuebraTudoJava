@@ -37,7 +37,8 @@ O projeto está dividido em pacotes para organizar as classes:
 - **5: Verificar dados da sua conta** - Mostra os dados da conta bancária criada.
 
 ## Features Futuras
-- **1: Criar um menu para direcionar o usuário para um determinado tipo de conta, dentre as 3 opções**: Poupança, Corrente e Jurídica, com cada uma seguindo suas características do mundo real.
+- **1: Tipos de conta:** Criar um menu para direcionar o usuário para um determinado tipo de conta, dentre as 3 opções: Poupança, Corrente e Jurídica, com cada uma seguindo suas características do mundo real.
+- **2: Correções Gramaticais**: Fazer as correções gramaticais de acordo com a formalidade do Banco da Vai na Web.
 
 ## Observações
 

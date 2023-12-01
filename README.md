@@ -38,3 +38,4 @@ O projeto está dividido em pacotes para organizar as classes:
 
 ## Features Futuras
 - **1: Criar um menu para direcionar o usuário para um determinado tipo de conta, dentre as 3 opções**: Poupança, Corrente e Jurídica, com cada uma seguindo suas características do mundo real.
+- **2: Correções Gramaticais**: Fazer as correções gramaticais de acordo com a formalidade do Banco da Vai na Web.
